@@ -8,7 +8,7 @@ const chartData = [
   [7,'7','-',6,7,'ช่อดอกไม้ที่เคยให้ไปเธอยังเก็บไว้รึเปล่า? / Gypsophlla','A lrynn','NAH MOH Music','pKO_WcifcDw'],
   [8,'8','-',4,8,'โลกแตก / Apocalypse','nuthkitta','อิสระ','zWF4x8hXgi4'],
   [9,'6','⬇️',10,1,'FLOWERS [No.1 : 1wk]','Tofu','อิสระ','fZeDuzJTRqk'],
-  [10,'5','⬇️',9,3,'XOXO','KIKI','อิสระ','SXBEH2mu6zc'],
+  [10,'5','⬇️',9,3,'XOXO','KIKI','Parinam Music','SXBEH2mu6zc'],
   [11,'N','⬆️',1,11,'trynafindyou','Lesssugär','Trashlab','i0GcEfrd1G4'],
   [12,'12','-',4,12,'รบกวน / Unstable Relationship','Dept','Smallroom','FVuOrozZm7A'],
   [13,'13','-',3,13,'TV Show','Television off','Smallroom','jMtMRyM60Z8'],
@@ -19,6 +19,7 @@ const chartData = [
   [18,'18','-',3,14,'Dear Friends','Plastic Plastic','What The Duck','BJ3vbzcVuCw'],
   [19,'16','⬇️',5,19,'Heart Space (11:59 PM)','Cloud Behind','อิสระ','1siFbBudTVU'],
   [20,'17','⬇️',4,17,'นัยน์ตา','Cheyada','อิสระ','3iPnjJrsb7s'],
+  
   
 
   
