@@ -1,5 +1,5 @@
 const chartData = [
-    [1,'N','⬆️',1,1,'Another Coast Ride','Soft Pinee','Sundae Records','_3IamoXnBgY'],
+    [1,'N','⬆️',1,1,'Another Coast Ride','Soft Pine','Sundae Records','_3IamoXnBgY'],
 [2,'N','⬆️',1,2,'LADA','The Biirthday Party','Trashlab','B4FKCb1W9qg'],
 [3,'N','⬆️',1,3,'notOKkrubbossX','_less','Sony Music TH','DwNNqPBAPGk'],
 [4,'N','⬆️',1,4,'happy (?)','Varis','อิสระ','khc9KOKKUZY'],
