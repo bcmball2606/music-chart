@@ -8,9 +8,10 @@ h1 {
 }
 
 table {
-  width: 100%;
+  width: 90%; /* Reduce the table width to 90% of the screen */
+  max-width: 800px; /* Set a maximum width for the table */
   border-collapse: collapse;
-  margin-top: 20px;
+  margin: 20px auto; /* Center the table on the page */
 }
 
 th, td {
@@ -30,4 +31,23 @@ tbody tr:nth-child(even) {
 
 tbody tr:hover {
   background-color: #ddd;
+}
+
+/* Adjust the cell sizes for each column */
+/* The first five columns will be smaller, and the last three columns will be wider */
+th:nth-child(-n+5),
+td:nth-child(-n+5) {
+  width: 10%; /* Adjust the width as needed */
+}
+
+th:nth-child(6),
+td:nth-child(6),
+th:nth-child(7),
+td:nth-child(7) {
+  width: 30%; /* Adjust the width as needed */
+}
+
+th:nth-child(8),
+td:nth-child(8) {
+  width: 15%; /* Adjust the width as needed */
 }
