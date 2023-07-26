@@ -37,17 +37,17 @@ tbody tr:hover {
 /* The first five columns will be smaller, and the last three columns will be wider */
 th:nth-child(-n+5),
 td:nth-child(-n+5) {
-  width: 10%; /* Adjust the width as needed */
+  width: 7%; /* Adjust the width as needed */
 }
 
 th:nth-child(6),
 td:nth-child(6),
 th:nth-child(7),
 td:nth-child(7) {
-  width: 35%; /* Adjust the width as needed */
+  width: 30%; /* Adjust the width as needed */
 }
 
 th:nth-child(8),
 td:nth-child(8) {
-  width: 20%; /* Adjust the width as needed */
+  width: 15%; /* Adjust the width as needed */
 }
