@@ -40,7 +40,7 @@ function populateChart() {
     let html = '';
     for (const row of chartData) {
       html += '<tr>';
-      for (let i = 0; i < 20; i++) {
+      for (let i = 0; i < row.length; i++) {
         if (i === row.length - 1) {
           // Get the YouTube link from the last element of the row
           const youtubeLink = row[i];
