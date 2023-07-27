@@ -11,10 +11,10 @@ body {
   }
   
   table {
-    width: 90%; /* Reduce the table width to 90% of the screen */
-    max-width: 1200px; /* Set a maximum width for the table */
+    width: 90%; 
+    max-width: 1200px; 
     border-collapse: collapse;
-    margin: 20px auto; /* Center the table on the page */
+    margin: 20px auto; 
   }
   
   th, td {
@@ -36,27 +36,26 @@ body {
     background-color: #ddd;
   }
   tbody tr:nth-child(-n+5):hover {
-    background-color: #add8e6; /* Blue color on hover */
+    background-color: #add8e6;
   }
   tbody tr:nth-child(-n+5) {
-    background-color: #e6f7ff; /* Light blue color */
+    background-color: #e6f7ff;
   }
   
-  /* Adjust the cell sizes for each column */
-  /* The first five columns will be smaller, and the last three columns will be wider */
+ 
   th:nth-child(-n+5),
   td:nth-child(-n+5) {
-    width: 6%; /* Adjust the width as needed */
+    width: 6%;
   }
   
   th:nth-child(6),
   td:nth-child(6),
   th:nth-child(7),
   td:nth-child(7) {
-    width: 25%; /* Adjust the width as needed */
+    width: 25%; 
   }
   
   th:nth-child(8),
   td:nth-child(8) {
-    width: 15%; /* Adjust the width as needed */
+    width: 15%; 
   }
