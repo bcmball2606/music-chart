@@ -27,13 +27,17 @@ const chartData = [
 
 
    
+  ];
+
+  
+function populateChart() {
     const tableBody = document.querySelector('tbody');
     let html = '';
     for (const row of chartData) {
       html += '<tr>';
       for (let i = 0; i < row.length; i++) {
         if (i === row.length - 1) {
-     
+          
           const youtubeLink = row[i];
           html += `<td><a href="https://www.youtube.com/watch?v=${youtubeLink}" target="_blank">Listen</a></td>`;
         } else {
