@@ -9,7 +9,7 @@ const chartData = [
 [8,'10','⬆️',10,3,'XOXO','KIKI','Parinam Music','SXBEH2mu6zc'],
 [9,'N','⬆️',1,9,'จะเกิดใหม่ครั้งใด ขอให้เธอได้เป็นขวัญใจ','Youth Brush','อิสระ','azVCm-lyXMM'],
 [10,'5','⬇️',5,1,'ฟุ้ง / Foong [No.1 : 1wk]','rubberstamp','อิสระ','VcmWYP5ZefY'],
-[11,'N','⬆️',1,11,'THUNDER N' LIGHTING','REUB','GUESSWHAT!?','WZPwyzUzapw'],
+[11,'N','⬆️',1,11,'THUNDER N LIGHTING','REUB','GUESSWHAT!?','WZPwyzUzapw'],
 [12,'8','⬇️',5,8,'โลกแตก / Apocalypse','nuthkitta','อิสระ','zWF4x8hXgi4'],
 [13,'6','⬇️',12,1,'By Your Side [No.1 : 1wk]','Seveth Of July','MILK BKK!','Om1uafF5aSM'],
 [14,'12','⬇️',5,12,'รบกวน / Unstable Relationship','Dept','Smallroom','FVuOrozZm7A'],
