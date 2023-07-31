@@ -11,14 +11,15 @@ const chartData = [
   [10,'11','⬆️',2,10,'THUNDER N LIGHTING','REUB','GUESSWHAT!?','WZPwyzUzapw'],
   [11,'20','⬆️',7,11,'Heart Space (11:59 PM)','Cloud Behind','อิสระ','1siFbBudTVU'],
   [12,'N','⬆️',1,16,'Come Around','wadfah','Smallroom','OND1JnbsOac'],
-  [13,'18','⬆️',5,12,'TV Show','Television off','Smallroom','jMtMRyM60Z8'],
-  [14,'14','-',6,13,'รบกวน / Unstable Relationship','Dept','Smallroom','FVuOrozZm7A'],
+  [13,'18','⬆️',5,13,'TV Show','Television off','Smallroom','jMtMRyM60Z8'],
+  [14,'14','-',6,14,'รบกวน / Unstable Relationship','Dept','Smallroom','FVuOrozZm7A'],
   [15,'N','⬆️',1,20,'ในวันเกิดฉันจะขอ','Soulfear','อิสระ','VYTm_72Cg9o'],
   [16,'16','-',2,16,'ได้ก็ดี','Morvasu','What The Duck','HMKtIPumqlw'],
-  [17,'19','⬆️',5,15,'Dear Friends','Plastic Plastic','What The Duck','BJ3vbzcVuCw'],
+  [17,'19','⬆️',5,14,'Dear Friends','Plastic Plastic','What The Duck','BJ3vbzcVuCw'],
   [18,'10','⬇️',6,1,'ฟุ้ง / Foong [No.1 : 1wk]','rubberstamp','อิสระ','VcmWYP5ZefY'],
   [19,'N','⬆️',1,19,'Finder','Seventh Of July','MILK BKK!','Qn1JSkaQxec'],
   [20,'12','⬇️',6,8,'โลกแตก / Apocalypse','nuthkitta','อิสระ','zWF4x8hXgi4'],
+  
   
 
   
