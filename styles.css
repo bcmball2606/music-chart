@@ -1,61 +1,152 @@
+/* ======================================== */
+/*           พื้นฐานและ Font              */
+/* ======================================== */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-  }
-  body {
-    font-family: "Sarabun", Arial, sans-serif;
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  table {
-    width: 90%; 
-    max-width: 1200px; 
-    border-collapse: collapse;
-    margin: 20px auto; 
-  }
-  
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-  }
-  
-  th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-  }
-  
-  tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  tbody tr:hover {
-    background-color: #ddd;
-  }
-  tbody tr:nth-child(-n+5):hover {
-    background-color: #add8e6;
-  }
-  tbody tr:nth-child(-n+5) {
-    background-color: #e6f7ff;
-  }
-  
- 
-  th:nth-child(-n+5),
-  td:nth-child(-n+5) {
-    width: 6%;
-  }
-  
-  th:nth-child(6),
-  td:nth-child(6),
-  th:nth-child(7),
-  td:nth-child(7) {
-    width: 25%; 
-  }
-  
-  th:nth-child(8),
-  td:nth-child(8) {
-    width: 15%; 
-  }
+    margin: 0;
+    /* --- V V V เลือก Font ที่คุณต้องการใช้ (โหลดจาก Google Fonts ใน HTML) V V V --- */
+    font-family: 'Poppins', 'Montserrat', 'Kanit', sans-serif;
+    /* --- ^ ^ ^ เลือก Font ที่คุณต้องการใช้ ^ ^ ^ --- */
+    color: #ffffff; /* สีตัวอักษรหลัก: ขาว */
+    overflow: hidden; /* ป้องกัน scrollbar ที่ไม่ต้องการ */
+    /* ทำให้พื้นหลังโปร่งใสสำหรับ OBS (ถ้าไม่ได้ตั้งใน OBS) */
+    /* background-color: rgba(0, 0, 0, 0); */
+}
+
+/* ======================================== */
+/*        Container หลัก และ พื้นหลัง       */
+/* ======================================== */
+
+/* Container หลัก: ขนาดต้องตรงกับภาพ PNG และ OBS Source */
+.leaderboard-container {
+    position: relative; /* เป็นจุดอ้างอิงให้ Element ลูก */
+    width: 1920px;      /* ความกว้างจริงของภาพ */
+    height: 1080px;     /* ความสูงจริงของภาพ */
+    overflow: hidden;   /* ซ่อนส่วนที่อาจจะล้น */
+}
+
+/* รูปภาพพื้นหลัง */
+.scoreboard-bg {
+    display: block;     /* แก้ปัญหาช่องว่างใต้ภาพ */
+    width: 100%;        /* กว้างเต็ม Container */
+    height: 100%;       /* สูงเต็ม Container */
+    position: absolute; /* วางตำแหน่งได้อิสระ */
+    top: 0;
+    left: 0;
+    z-index: 1;         /* อยู่ด้านหลังข้อมูล */
+    /* ไม่ควรต้องใช้ object-fit ถ้าขนาด Container ถูกต้อง */
+}
+
+/* ======================================== */
+/*     พื้นที่แสดงข้อมูล (ทับบนพื้นหลัง)     */
+/* ======================================== */
+
+/* กรอบใหญ่ที่คลุมข้อมูลทั้งหมด */
+/* กรอบใหญ่ที่คลุมข้อมูลทั้งหมด */
+.data-overlay {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+
+
+
+    /* *** ลองค่าใหม่: เลื่อนลง & เลื่อนซ้าย *** */
+    top: 400px;      /* <<-- เพิ่มค่า top เพื่อ "เลื่อนลง" (ลอง 300 หรือมากกว่า/น้อยกว่า) */
+    left: 50px;      /* <<-- ลดค่า left เพื่อ "เลื่อนซ้าย" (ลอง 50 หรือมากกว่า/น้อยกว่า) */
+    right: 110px;     /* <<-- เพิ่มค่า right เพื่อให้มีพื้นที่ขยับซ้าย (อาจต้องปรับคู่กับ left) */
+    bottom: 80px;     /* <<-- อาจจะลด bottom ลงเล็กน้อย เพื่อให้พื้นที่แนวตั้งสัมพันธ์กับ top (ลองปรับ) */
+    gap: 80px;       /* <<-- ช่องว่างระหว่างคอลัมน์ (น่าจะยังไม่ต้องเปลี่ยน) */
+    /* --- ^ ^ ^ ปรับค่าตรงนี้ ^ ^ ^ --- */
+
+    /* border: 1px dashed yellow; */
+}
+
+/* คอลัมน์ข้อมูล (ซ้าย หรือ ขวา) */
+.column {
+    flex: 1;                /* แบ่งพื้นที่ให้คอลัมน์เท่าๆ กัน */
+    display: flex;
+    flex-direction: column; /* เรียงข้อมูลจากบนลงล่าง */
+
+    /* --- V V V ปรับระยะห่างแนวตั้งระหว่างแถวผู้เล่น V V V --- */
+    gap: 25px;              /* ลองปรับค่านี้ */
+    /* --- ^ ^ ^ ปรับระยะห่างแนวตั้งระหว่างแถวผู้เล่น ^ ^ ^ --- */
+
+    /* เส้นประฟ้า ช่วยในการจัดตำแหน่ง (ลบออกเมื่อเสร็จ) */
+    /* border: 1px dashed cyan; */
+}
+
+/* ======================================== */
+/*        แถวข้อมูลผู้เล่นแต่ละคน          */
+/* ======================================== */
+
+.player-row {
+    display: flex;          /* จัดข้อมูลย่อย (Rank, Name, ...) แนวนอน */
+    align-items: center;    /* จัดกึ่งกลางแนวตั้ง */
+
+    /* --- V V V ปรับขนาด Font และ Padding พื้นฐาน V V V --- */
+    padding: 5px 0;         /* ลองปรับ: Padding บน-ล่างเล็กน้อย */
+    font-size: 32px;        /* ลองปรับ: ขนาด Font พื้นฐาน */
+    line-height: 1.3;       /* ลองปรับ: ความสูงบรรทัด */
+    /* --- ^ ^ ^ ปรับขนาด Font และ Padding พื้นฐาน ^ ^ ^ --- */
+
+    /* เส้นคั่นบางๆ ระหว่างแถว (ถ้าต้องการ) */
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+}
+
+/* ======================================== */
+/*    ข้อมูลย่อยในแต่ละแถว (Rank, Name, ...) */
+/* ======================================== */
+/* --- V V V สำคัญมาก: ปรับ Width, Margin, Font-Size ของแต่ละส่วน V V V --- */
+/* *** ใช้ DevTools (F12) เพื่อหาค่าที่เหมาะสมที่สุด *** */
+
+/* อันดับ */
+.player-rank {
+    font-weight: 700;       /* ตัวหนา */
+    text-align: right;      /* ชิดขวา */
+    width: 70px;            /* ลองปรับ: ความกว้างช่อง Rank */
+    margin-right: 40px;     /* ลองปรับ: ระยะห่างไปทางขวา (ก่อนถึงชื่อ) */
+    font-size: 36px;        /* ลองปรับ: ขนาด Font */
+}
+
+/* ชื่อผู้เล่น */
+.player-name {
+    flex-grow: 1;           /* ให้ยืดเต็มพื้นที่ที่เหลือ */
+    font-weight: 600;       /* หนาปานกลาง */
+    text-align: left;       /* ชิดซ้าย */
+    white-space: nowrap;    /* ไม่ให้ขึ้นบรรทัดใหม่ */
+    overflow: hidden;       /* ซ่อนส่วนที่เกิน */
+    text-overflow: ellipsis;/* แสดง ... ถ้าชื่อยาว */
+    margin-right: 50px;     /* ลองปรับ: ระยะห่างไปทางขวา (ก่อนถึง Played) */
+    font-size: 34px;        /* ลองปรับ: ขนาด Font */
+}
+
+/* สไตล์ร่วมของคอลัมน์ตัวเลข */
+.player-played,
+.player-wins,
+.player-plusminus,
+.player-points {
+    text-align: right;      /* ชิดขวา */
+    margin-left: 25px;      /* ลองปรับ: ระยะห่างระหว่างคอลัมน์ตัวเลข */
+    font-size: 32px;        /* ลองปรับ: ขนาด Font */
+    flex-shrink: 0;         /* ป้องกันไม่ให้คอลัมน์ตัวเลขหดตัวเมื่อชื่อยาว */
+}
+
+/* ความกว้างขั้นต่ำและสไตล์เฉพาะของแต่ละคอลัมน์ตัวเลข */
+.player-played {
+    min-width: 80px;        /* ลองปรับ: ความกว้างขั้นต่ำ */
+}
+.player-wins {
+    min-width: 80px;        /* ลองปรับ: ความกว้างขั้นต่ำ */
+}
+.player-plusminus {
+    min-width: 100px;       /* ลองปรับ: ความกว้างขั้นต่ำ */
+    color: #c37eff;         /* สีม่วง (จากดีไซน์เดิม) */
+    font-weight: 700;       /* ตัวหนา */
+    font-size: 34px;        /* ลองปรับ: ขนาด Font */
+}
+.player-points {
+    min-width: 90px;        /* ลองปรับ: ความกว้างขั้นต่ำ */
+    font-weight: 700;       /* ตัวหนา */
+    font-size: 36px;        /* ลองปรับ: ขนาด Font */
+    color: #FFFFFF;         /* สีขาว */
+}
+/* --- ^ ^ ^ สำคัญมาก: ปรับ Width, Margin, Font-Size ของแต่ละส่วน ^ ^ ^ --- */
