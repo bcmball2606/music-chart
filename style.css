@@ -101,10 +101,22 @@ body {
 /* อันดับ */
 .player-rank {
     font-weight: 700;       /* ตัวหนา */
-    text-align: right;      /* ชิดขวา */
+    text-align: center;      /* ชิดขวา */
     width: 70px;            /* ลองปรับ: ความกว้างช่อง Rank */
-    margin-right: 40px;     /* ลองปรับ: ระยะห่างไปทางขวา (ก่อนถึงชื่อ) */
+    margin-right: 35px;     /* ลองปรับ: ระยะห่างไปทางขวา (ก่อนถึงชื่อ) */
     font-size: 36px;        /* ลองปรับ: ขนาด Font */
+}
+
+.player-rank.rank-blue {
+    color: #87CEFA; /* สีฟ้าอ่อน (อันดับ 1-4) */
+}
+
+.player-rank.rank-green {
+    color: #90EE90; /* สีเขียวอ่อน (อันดับ 5-8) */
+}
+
+.player-rank.rank-red {
+    color: #F08080; /* สีแดง/ชมพูอ่อน (อันดับ 9-12) */
 }
 
 /* ชื่อผู้เล่น */
