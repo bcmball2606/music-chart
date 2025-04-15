@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGuessr Leaderboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- เพิ่ม Font ที่คล้ายใน Canva (ตัวอย่าง: Poppins หรือ Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="leaderboard-container">
+        <!-- แสดงภาพพื้นหลังที่เรา Export มา -->
+        <img src="leaderboard_template.png" alt="Leaderboard Background" class="leaderboard-bg">
+
+        <!-- Container สำหรับข้อมูลที่จะวางทับ -->
+        <div class="data-overlay">
+            <!-- คอลัมน์ซ้าย (Rank 1-6) -->
+            <div class="column" id="left-column">
+                <!-- ข้อมูลผู้เล่นจะถูกใส่ที่นี่โดย JavaScript -->
+            </div>
+            <!-- คอลัมน์ขวา (Rank 7-12) -->
+            <div class="column" id="right-column">
+                <!-- ข้อมูลผู้เล่นจะถูกใส่ที่นี่โดย JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
