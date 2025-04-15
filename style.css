@@ -115,7 +115,7 @@ body {
     white-space: nowrap;    /* ไม่ให้ขึ้นบรรทัดใหม่ */
     overflow: hidden;       /* ซ่อนส่วนที่เกิน */
     text-overflow: ellipsis;/* แสดง ... ถ้าชื่อยาว */
-    margin-right: 50px;     /* ลองปรับ: ระยะห่างไปทางขวา (ก่อนถึง Played) */
+    margin-right: 0px;     /* ลองปรับ: ระยะห่างไปทางขวา (ก่อนถึง Played) */
     font-size: 34px;        /* ลองปรับ: ขนาด Font */
 }
 
@@ -125,7 +125,7 @@ body {
 .player-plusminus,
 .player-points {
     text-align: right;      /* ชิดขวา */
-    margin-left: 25px;      /* ลองปรับ: ระยะห่างระหว่างคอลัมน์ตัวเลข */
+    margin-left: 0px;      /* ลองปรับ: ระยะห่างระหว่างคอลัมน์ตัวเลข */
     font-size: 32px;        /* ลองปรับ: ขนาด Font */
     flex-shrink: 0;         /* ป้องกันไม่ให้คอลัมน์ตัวเลขหดตัวเมื่อชื่อยาว */
 }

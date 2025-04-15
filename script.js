@@ -102,4 +102,4 @@ fetchAndDisplayLeaderboard();
 
 // ตั้งเวลาให้ดึงข้อมูลใหม่ทุกๆ 10 วินาที (10000 ms)
 // คุณอาจปรับเวลาให้น้อยลงได้ถ้าต้องการอัปเดตเร็วขึ้น เช่น 5000 (5 วินาที)
-setInterval(fetchAndDisplayLeaderboard, 10000);
+setInterval(fetchAndDisplayLeaderboard, 30000);
