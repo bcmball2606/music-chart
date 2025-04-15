@@ -1,31 +1,33 @@
-<!DOCTYPE html><meta charset="UTF-8">
-<html>
+<!DOCTYPE html>
+<html lang="th">
 <head>
-  <title>BCMBall Fav.Song</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sarabun:400,700|Kanit:400,700&display=swap">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGuessr Leaderboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- เพิ่ม Font ที่คล้ายใน Canva (ตัวอย่าง: Poppins หรือ Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Top 20 My Favorite Song (Week 32/2023 | 29 July - 4 August 2023)</h1>
-  <table id="chart">
-    <thead>
-      <tr>
-        <th>This Week</th>
-        <th>Last Week</th>
-        <th>-</th>
-        <th>weeks</th>
-        <th>Peak</th>
-        <th>Title</th>
-        <th>Artist</th>
-        <th>Label</th>
-        <th>Listen</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Your chart data will be dynamically added here -->
-    </tbody>
-  </table>
+    <div class="leaderboard-container">
+        <!-- แสดงภาพพื้นหลังที่เรา Export มา -->
+        <img src="leaderboard_template.png" alt="Leaderboard Background" class="leaderboard-bg">
 
-  <script src="script.js"></script>
+        <!-- Container สำหรับข้อมูลที่จะวางทับ -->
+        <div class="data-overlay">
+            <!-- คอลัมน์ซ้าย (Rank 1-6) -->
+            <div class="column" id="left-column">
+                <!-- ข้อมูลผู้เล่นจะถูกใส่ที่นี่โดย JavaScript -->
+            </div>
+            <!-- คอลัมน์ขวา (Rank 7-12) -->
+            <div class="column" id="right-column">
+                <!-- ข้อมูลผู้เล่นจะถูกใส่ที่นี่โดย JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
